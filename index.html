@@ -3,13 +3,237 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nébula | Artista Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== ESTILOS GENERALES ========== */
+        /* Fondo oscuro y texto claro para toda la página */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0b0b1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Todas las imágenes y vídeos se adaptan al ancho de la pantalla */
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Cada sección va centrada y con espacio alrededor */
+        section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Títulos en color cian */
+        /* Títulos con la fuente Orbitron (si no carga, usa Arial) */
+        h1,
+        h2 {
+            color: #00e5ff;
+            font-family: 'Orbitron', Arial, sans-serif;
+            letter-spacing: 2px;
+        }
+
+        /* ========== CABECERA ========== */
+        header {
+            background-color: #000000;
+            padding: 15px 30px;
+            display: flex;
+            /* pone logo y menú en la misma fila */
+            justify-content: space-between;
+            /* logo a la izquierda, menú a la derecha */
+            align-items: center;
+        }
+
+        .logo-nombre {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        /* ========== PIES DE FOTO (atribución de licencias) ========== */
+        figcaption {
+            font-size: 13px;
+            color: #aaaaaa;
+            margin-top: 8px;
+        }
+
+        figcaption a {
+            color: #00e5ff;
+        }
+
+        /* ========== GALERÍA ========== */
+        /* Las 3 miniaturas una al lado de otra; si no caben, bajan de línea */
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .galeria figure {
+            margin: 0;
+        }
+
+        .galeria img {
+            border-radius: 8px;
+        }
+
+        /* ========== AUDIO ========== */
+        audio {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* ========== PIE DE PÁGINA ========== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!----HERO---->
+    <!-- ========== CABECERA: logo + menú ========== -->
+    <header>
+        <div class="logo-nombre" style="font-family: 'Orbitron', sans-serif;">
+            <img src="assets/img/logo.png" alt="Logotipo de Nébula: una luna gris con cráteres" width="48" height="48"
+                loading="lazy">
+            NÉBULA
+        </div>
+
+        <nav>
+            <a href="#galeria">Galería</a>
+            <a href="#video">Vídeo</a>
+            <a href="#ambiente">Ambiente</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- ========== CONTENIDO PRINCIPAL ========== -->
+    <main>
+
+        <!-- 1. IMAGEN PRINCIPAL (hero) -->
+        <section>
+            <h1>Paisajes de ciencia ficción</h1>
+            <p>Soy Nébula, artista digital. Creo mundos que aún no existen.</p>
+
+            <figure>
+                <img src="assets/img/hero.webp"
+                    alt="Explosión cósmica abstracta de luces naranjas, amarillas y azules sobre un fondo verde oscuro"
+                    width="1920" height="1280" loading="lazy">
+                <figcaption>
+                    Fotografía de <a href="https://www.pexels.com/@robert-clark-504241532/">Robert Clark</a>,
+                    vía <a href="https://www.pexels.com/photo/30107839/">Pexels</a>. Licencia: Pexels License.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- 2. GALERÍA (3 miniaturas) -->
+        <section id="galeria">
+            <h2>Galería de trabajos</h2>
+
+            <div class="galeria">
+                <figure>
+                    <img src="assets/img/thumb1.webp" alt="DESCRIPCIÓN de la imagen 1" width="400" height="250"
+                        loading="lazy">
+                    <figcaption>
+                        "TÍTULO" por <a href="URL_AUTOR1">AUTOR 1</a>,
+                        vía <a href="URL1">FUENTE</a>. LICENCIA.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/thumb2.webp" alt="DESCRIPCIÓN de la imagen 2" width="400" height="250"
+                        loading="lazy">
+                    <figcaption>
+                        "TÍTULO" por <a href="URL_AUTOR2">AUTOR 2</a>,
+                        vía <a href="URL2">FUENTE</a>. LICENCIA.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/thumb3.webp" alt="DESCRIPCIÓN de la imagen 3" width="400" height="250"
+                        loading="lazy">
+                    <figcaption>
+                        "TÍTULO" por <a href="URL_AUTOR3">AUTOR 3</a>,
+                        vía <a href="URL3">FUENTE</a>. LICENCIA.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- 3. VÍDEO DE PRESENTACIÓN -->
+        <section id="video">
+            <h2>Presentación</h2>
+
+            <figure>
+                <video controls poster="assets/img/poster.webp" width="1280" height="720">
+                    <source src="assets/video/intro.mp4" type="video/mp4">
+                    Tu navegador no soporta vídeo HTML5.
+                </video>
+                <figcaption>
+                    "TÍTULO" por <a href="URL_AUTOR_V">AUTOR</a>,
+                    vía <a href="URL_V">Pexels</a>. Licencia: LICENCIA.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- 4. AUDIO AMBIENTAL -->
+        <section id="ambiente">
+            <h2>Sonido ambiental</h2>
+
+            <audio controls>
+                <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio HTML5.
+            </audio>
+            <p>
+                <small>
+                    "TÍTULO" por AUTOR, vía <a href="URL_A">FUENTE</a>. Licencia: LICENCIA.
+                </small>
+            </p>
+        </section>
+
+        <!-- 5. LLAMADA A LA ACCIÓN (imagen animada) -->
+        <section id="contacto">
+            <h2>¿Hablamos?</h2>
+            <a href="mailto:contacto@nebula.example">
+                <img src="assets/img/cta.webp" alt="Botón animado de contacto con efecto neón" width="300" height="100"
+                    loading="lazy">
+            </a>
+        </section>
+
+    </main>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer>
+        <p>© 2026 Nébula · Artista digital ficticia · Proyecto educativo</p>
+    </footer>
 
 </body>
 
