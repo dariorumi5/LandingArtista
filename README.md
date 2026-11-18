@@ -2,7 +2,7 @@
 
 Página de presentación de Nébula, una artista digital ficticia de paisajes de ciencia ficción.
 
-Web online: https://TU_USUARIO.github.io/TU_REPOSITORIO/
+Web online: https://dariorumi5.github.io/LandingArtista/
 
 ## Recursos y licencias
 
